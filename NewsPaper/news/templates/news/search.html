@@ -1,0 +1,15 @@
+{% extends 'flatpages/default.html' %}
+
+{% block content %}
+
+<form method="GET">
+    {{ filter.form }}
+    <input type="submit" value="Найти">
+</form>
+
+{% for Post in filter.qs %}
+{{ Post.dateCreation|date:'d M Y H:m' }}
+{{ Post.title }}
+{{ Post.author }}
+{% endfor %}
+{% endblock content %}

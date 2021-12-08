@@ -1,0 +1,7 @@
+{% extends 'flatpages/default.html' %}
+
+{% block content %}
+{% for author in Authors %}
+<p>{{ author.authorUser }}</p>
+{% endfor %}
+{% endblock content %}
